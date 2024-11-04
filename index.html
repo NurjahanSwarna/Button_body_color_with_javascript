@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div id="main">
+        <button id="click">Click me</button>
+        <button id="read" onclick ="this.style.backgroundColor = 'blue'">Read More</button>
+        <button id="here" onclick="abc()">Click Here</button>
+        <button id="ref">Refresh</button> 
+    </div>
+    <br>
+    <div id="another">
+        <h2>Can I do it?</h2>
+        <button id="bg_red">Click Me</button>
+        <button id="bg_pink">Read More</button>
+        <button id="bg_green">Search Here</button>
+        <button id="bg_blue">Go Here</button>
+        <button id="new_text">New Text</button>
+        <button id="bg_refresh">Refresh</button>
+    </div>
+    <br>
+    <div id="text_change">
+        <h1>Defult Text....</h1>
+        <input id="input" type="text" placeholder="Enter you name...">
+        <button id="new">Click for update</button>
+        <button id="submit">Submit</button>
+    </div>
+    
+    <script>
+        let clickMe = document.getElementById('click');
+         clickMe.addEventListener('click', function(){
+            clickMe.style.backgroundColor = "red"
+         })
+        let clickHere = document.getElementById('here');
+        function abc(){
+            clickHere.style.backgroundColor = "pink"
+        }
+        // let ref = document.getElementById('ref');
+
+       ref.onclick = function(){
+        ref.style.backgroundColor = 'yellow'
+       };
+    //   let ref1 = document.getElementById('ref');
+    //   ref1.addEventListener('click', function(){
+    //     let  body = document.getElementById('body');
+    //     body.style.backgroundColor = 'brown'
+    //   })
+
+       let bgRed = document.getElementById('bg_red');
+       bgRed.addEventListener('click', function(){
+         let body = document.getElementById('body');
+         body.style.backgroundColor = 'red'
+       })
+       let bgPink = document.getElementById('bg_pink');
+       bgPink.addEventListener('click', function(){
+        let body = document.getElementById('body');
+        body.style.backgroundColor = 'pink'
+       });
+       let bgGreen = document.getElementById('bg_green');
+       bgGreen.addEventListener('click', function(){
+        let body = document.getElementById('body');
+        body.style.backgroundColor = "green"
+       });
+       document.getElementById('bg_blue').addEventListener('click', function(){
+        let body = document.getElementById('body').style.backgroundColor = ('brown')
+       })
+
+       document.getElementById('bg_refresh').addEventListener('click', function(){
+        location.reload();
+       });
+    //    let bgRefresh = document.getElementById('bg_refresh');
+    //    bgRefresh.addEventListener('click', function(){
+    //     location.reload();
+    //    });
+
+    document.getElementById('new_text').addEventListener('click', function(){
+        document.getElementsByTagName('h2')[0].innerText = 'Yes, You can!'
+    });
+   
+        
+   const ami = document.getElementById('new');
+   ami.addEventListener('click', function(){
+      const inputFild = document.getElementById('input');
+    //   inputFild.style.padding = "20px 30px";
+       const inputFildValue = inputFild.value; 
+    //    inputFildValue.style.padding = "10px 10px"
+       const tumi= document.getElementsByTagName('h1')[0].innerText = inputFildValue; 
+       chatBox.appendChild(tumi);
+       chatBox.scrollTop = chatBox.scrollHeight; 
+       inputFild.value = '';
+
+    });
+
+    document.getElementById('submit').addEventListener('click', function(){
+        location.reload();
+    });
+
+
+    </script>
+</body>
+</html>
